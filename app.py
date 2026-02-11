@@ -10,6 +10,14 @@ def on_sum():
         label_result.config(text=f"Resultado: {resultado}")
     except ValueError:
         messagebox.showerror("Error", "Introduce dos números")
+def on_rest():
+    a = entry_a.get()
+    b = entry_b.get()
+    try:
+        resultado = sum_two(a, b)
+        label_result.config(text=f"Resultado: {resultado}")
+    except ValueError:
+        messagebox.showerror("Error", "Introduce dos números")
 
 root = tk.Tk()
 root.title("Suma")
@@ -27,6 +35,9 @@ entry_b.grid(row=1, column=1)
 
 btn = tk.Button(frame, text="Sumar", command=on_sum)
 btn.grid(row=2, column=0, columnspan=2, pady=5)
+
+btn = tk.Button(frame, text="Restar", command=on_rest)
+btn.grid(row=3, column=0, columnspan=2, pady=5)
 
 label_result = tk.Label(frame, text="Resultado: ")
 label_result.grid(row=3, column=0, columnspan=2)
