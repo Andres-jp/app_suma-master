@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
-from calc import sum_two
+from calc import sum_two, rest_two
 
 def on_sum():
     a = entry_a.get()
@@ -14,7 +14,7 @@ def on_rest():
     a = entry_a.get()
     b = entry_b.get()
     try:
-        resultado = sum_two(a, b)
+        resultado = rest_two(a, b)
         label_result.config(text=f"Resultado: {resultado}")
     except ValueError:
         messagebox.showerror("Error", "Introduce dos números")
