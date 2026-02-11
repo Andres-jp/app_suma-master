@@ -8,4 +8,4 @@ def rest_two(a, b):
         return float(a) - float(b)
     except Exception as e:
         raise ValueError("Entradas no numéricas") from e
-    #comentario random numero 2
+    #comentario random numero 3
