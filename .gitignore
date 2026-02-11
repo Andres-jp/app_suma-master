@@ -6,3 +6,5 @@ __pycache__/
 .DS_Store
 build/
 app.spec
+app.ico
+MiSumaApp.spec
